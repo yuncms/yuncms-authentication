@@ -6,6 +6,11 @@ use xutl\bootstrap\filestyle\FilestyleAsset;
 use yuncms\authentication\models\Authentication;
 
 FilestyleAsset::register($this);
+
+/*
+ * @var yii\web\View $this
+ * @var \yuncms\authentication\frontend\models\Authentication $model
+ */
 ?>
 <?php
 $form = ActiveForm::begin([

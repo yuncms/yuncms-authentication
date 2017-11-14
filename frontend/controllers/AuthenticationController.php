@@ -10,7 +10,6 @@ namespace yuncms\authentication\frontend\controllers;
 use Yii;
 use yii\web\Response;
 use yii\web\Controller;
-use yii\web\UploadedFile;
 use yii\filters\AccessControl;
 use yuncms\authentication\frontend\models\Authentication;
 

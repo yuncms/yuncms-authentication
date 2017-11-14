@@ -60,6 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             } elseif ($model->status == 2) {
                                 return Yii::t('authentication', 'Authenticated');
                             }
+                            return null;
                         },
                         'format' => 'raw',
                     ],

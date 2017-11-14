@@ -4,13 +4,11 @@ namespace yuncms\authentication\backend\controllers;
 
 use Yii;
 use yii\web\Response;
-use yii\filters\VerbFilter;
+use yii\web\Controller;
 use yii\bootstrap\ActiveForm;
 use yii\web\NotFoundHttpException;
 use yuncms\authentication\models\Authentication;
 use yuncms\authentication\backend\models\AuthenticationSearch;
-use yii\web\Controller;
-
 
 /**
  * AuthenticationController implements the CRUD actions for Authentication model.
@@ -23,7 +21,7 @@ class AuthenticationController extends Controller
         return [
             //....
             'settings' => [
-                'class' => 'yuncms\system\actions\SettingsAction',
+                'class' => 'yuncms\core\actions\SettingsAction',
                 'modelClass' => 'yuncms\authentication\models\Settings',
                 //'scenario' => 'user',
                 //'scenario' => 'site', // Change if you want to re-use the model for multiple setting form.

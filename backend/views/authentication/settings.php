@@ -5,7 +5,6 @@ use xutl\inspinia\Box;
 use xutl\inspinia\Toolbar;
 use xutl\inspinia\Alert;
 use xutl\inspinia\ActiveForm;
-use yuncms\user\backend\models\Settings;
 
 /* @var yii\web\View $this  */
 /* @var yuncms\authentication\models\Settings $model  */

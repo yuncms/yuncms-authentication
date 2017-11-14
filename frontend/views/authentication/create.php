@@ -3,7 +3,7 @@ use xutl\bootstrap\filestyle\FilestyleAsset;
 
 /*
  * @var yii\web\View $this
- * @var yuncms\authentication\models\Authentication $model
+ * @var \yuncms\authentication\models\Authentication $model
  */
 
 $this->title = Yii::t('authentication', 'Authentication');

@@ -8,7 +8,6 @@ use yii\helpers\Json;
 use yii\queue\Queue;
 use yii\queue\RetryableJob;
 use yii\httpclient\Client;
-use yuncms\user\models\User;
 use yuncms\authentication\models\Authentication;
 
 /**
@@ -88,26 +87,6 @@ class AuthenticationJob extends BaseObject implements RetryableJob
             return Json::decode($response->data['outputs'][0]['outputValue']['dataValue']);
         }
         return false;
-    }
-
-    /**
-     * 获取Http Client
-     * @return Client
-     */
-    public function getHttpClient()
-    {
-        if (!is_object($this->_httpClient)) {
-            $this->_httpClient = new Client([
-                'baseUrl' => $this->baseUrl,
-                'requestConfig' => [
-                    'options' => $this->requestOptions
-                ],
-                'responseConfig' => [
-                    'format' => Client::FORMAT_JSON
-                ],
-            ]);
-        }
-        return $this->_httpClient;
     }
 
     /**
