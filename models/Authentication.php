@@ -114,7 +114,7 @@ class Authentication extends ActiveRecord
             ],
             'idCardMatch' => [
                 'id_card',
-                'yuncms\system\validators\IdCardValidator',
+                'yuncms\core\validators\IdCardValidator',
                 'when' => function ($model) {//中国大陆18位身份证号码校验
                     return $model->id_type == static::TYPE_ID;
                 },
