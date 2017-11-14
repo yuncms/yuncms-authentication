@@ -1,13 +1,11 @@
 # yii2-authentication
 
-适用于Yii2的实名认证模块
+The authentication module for yuncms.
 
-[![Latest Stable Version](https://poser.pugx.org/yuncms/yii2-authentication/v/stable.png)](https://packagist.org/packages/yuncms/yii2-authentication)
-[![Total Downloads](https://poser.pugx.org/yuncms/yii2-authentication/downloads.png)](https://packagist.org/packages/yuncms/yii2-authentication)
-[![Reference Status](https://www.versioneye.com/php/yuncms:yii2-authentication/reference_badge.svg)](https://www.versioneye.com/php/yuncms:yii2-authentication/references)
-[![Build Status](https://img.shields.io/travis/yiisoft/yii2-authentication.svg)](http://travis-ci.org/yuncms/yii2-authentication)
-[![Dependency Status](https://www.versioneye.com/php/yuncms:yii2-authentication/dev-master/badge.png)](https://www.versioneye.com/php/yuncms:yii2-authentication/dev-master)
-[![License](https://poser.pugx.org/yuncms/yii2-authentication/license.svg)](https://packagist.org/packages/yuncms/yii2-authentication)
+[![Latest Stable Version](https://poser.pugx.org/yuncms/yuncms-authentication/v/stable.png)](https://packagist.org/packages/yuncms/yuncms-authentication)
+[![Total Downloads](https://poser.pugx.org/yuncms/yuncms-authentication/downloads.png)](https://packagist.org/packages/yuncms/yuncms-authentication)
+[![Build Status](https://img.shields.io/travis/yiisoft/yuncms-authentication.svg)](http://travis-ci.org/yuncms/yuncms-authentication)
+[![License](https://poser.pugx.org/yuncms/yuncms-authentication/license.svg)](https://packagist.org/packages/yuncms/yuncms-authentication)
 
 ## Installation
 
@@ -16,13 +14,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-$ composer require yuncms/yii2-authentication
+$ composer require yuncms/yuncms-authentication
 ```
 
 or add
 
 ```
-"yuncms/yii2-authentication": "~1.0.0"
+"yuncms/yuncms-authentication": "~2.0.0"
 ```
 
 to the `require` section of your `composer.json` file.
