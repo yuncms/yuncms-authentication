@@ -6,7 +6,7 @@ use Yii;
 use yii\base\BaseObject;
 use yii\helpers\Json;
 use yii\queue\Queue;
-use yii\queue\RetryableJob;
+use yii\queue\RetryableJobInterface;
 use yii\httpclient\Client;
 use yuncms\authentication\models\Authentication;
 
@@ -14,7 +14,7 @@ use yuncms\authentication\models\Authentication;
  * 实名认证任务处理类
  * @package common\jobs
  */
-class AuthenticationJob extends BaseObject implements RetryableJob
+class AuthenticationJob extends BaseObject implements RetryableJobInterface
 {
     /**
      * @var int 用户ID
