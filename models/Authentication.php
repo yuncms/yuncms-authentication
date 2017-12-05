@@ -97,7 +97,7 @@ class Authentication extends ActiveRecord
     {
         return [
             //realName rule
-            'realNameRequired' => ['real_name', 'required'],
+            'realNameRequired' => ['real_name', 'required', 'on' => [self::SCENARIO_CREATE, self::SCENARIO_UPDATE]],
             'realNameTrim' => ['real_name',  'trim'],
 
             //idCard rule
@@ -130,6 +130,11 @@ class Authentication extends ActiveRecord
                     self::TYPE_ID, self::TYPE_PASSPORT, self::TYPE_ARMYID, self::TYPE_TAIWANID, self::TYPE_HKMCID
                 ],
                 'on' => [self::SCENARIO_CREATE, self::SCENARIO_UPDATE]
+            ],
+            'idTypeDefault' => [
+                'id_type',
+                'default',
+                'value' => self::TYPE_ID,
             ],
 
             //status rule
