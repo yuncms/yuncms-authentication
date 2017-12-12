@@ -28,8 +28,8 @@
   },
   "extra": {
     "yuncms": {
-      "name": "authentication",
-      "i18n": {
+      "id": "authentication",
+      "translate": {
         "class": "yii\\i18n\\PhpMessageSource",
         "sourceLanguage": "en-US",
         "basePath": "@yuncms/authentication/messages"
