@@ -34,6 +34,7 @@ class AuthenticationController extends Controller
     /**
      * Lists all Authentication models.
      * @return mixed
+     * @throws \yii\base\InvalidConfigException
      */
     public function actionIndex()
     {
@@ -50,6 +51,7 @@ class AuthenticationController extends Controller
      * Displays a single Authentication model.
      * @param integer $id
      * @return mixed
+     * @throws NotFoundHttpException
      */
     public function actionView($id)
     {
@@ -63,6 +65,7 @@ class AuthenticationController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
+     * @throws NotFoundHttpException
      */
     public function actionUpdate($id)
     {

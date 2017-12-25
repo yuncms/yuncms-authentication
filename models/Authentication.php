@@ -12,6 +12,7 @@ use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
 use yuncms\user\models\User;
 use yuncms\authentication\AuthenticationTrait;
+use yuncms\authentication\jobs\AuthenticationJob;
 
 /**
  * This is the model class for table "authentications".
@@ -98,7 +99,7 @@ class Authentication extends ActiveRecord
         return [
             //realName rule
             'realNameRequired' => ['real_name', 'required', 'on' => [self::SCENARIO_CREATE, self::SCENARIO_UPDATE]],
-            'realNameTrim' => ['real_name',  'trim'],
+            'realNameTrim' => ['real_name', 'trim'],
 
             //idCard rule
             'idCardRequired' => ['id_card', 'required', 'on' => [self::SCENARIO_CREATE, self::SCENARIO_UPDATE]],
@@ -226,8 +227,22 @@ class Authentication extends ActiveRecord
     }
 
     /**
+     * @inheritdoc
+     */
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert, $changedAttributes);
+        if ($this->getSetting('enableMachineReview') && ($this->id_type == self::TYPE_ID && empty(!$this->passport_cover))) {
+            if ($this->scenario == self::SCENARIO_CREATE || $this->scenario == self::SCENARIO_UPDATE) {
+                Yii::$app->queue->push(new AuthenticationJob(['userId' => $this->user_id]));
+            }
+        }
+    }
+
+    /**
      * 删除前先删除附件
      * @return bool
+     * @throws \yii\base\Exception
      */
     public function beforeDelete()
     {

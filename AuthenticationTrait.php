@@ -35,6 +35,7 @@ trait AuthenticationTrait
      * 获取头像的存储路径
      * @param int $userId
      * @return string
+     * @throws \yii\base\Exception
      */
     public function getIdCardPath($userId)
     {

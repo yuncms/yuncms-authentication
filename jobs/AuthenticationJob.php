@@ -24,6 +24,7 @@ class AuthenticationJob extends BaseObject implements RetryableJobInterface
     /**
      * 执行实名认证任务
      * @param Queue $queue
+     * @throws \yii\httpclient\Exception
      */
     public function execute($queue)
     {
