@@ -15,8 +15,7 @@
     }
   ],
   "require": {
-    "yiisoft/yii2": "~2.0.6",
-    "yiisoft/yii2-queue": "~2.0.1",
+    "yuncms/framework": "~1.0.0",
     "xutl/yii2-bootstrap-filestyle-asset": "~1.0",
     "xutl/yii2-id98": "~1.0.0"
   },
